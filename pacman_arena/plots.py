@@ -64,10 +64,11 @@ def plot_cumulative_time(run_dir: Path, out: Path, models: list[str] | None, min
     fig, ax = plt.subplots(figsize=(10, 5.6), dpi=160)
     fig.patch.set_facecolor(SURFACE)
     ax.set_facecolor(SURFACE)
-    ends = []
+    ends, used_min = [], min_games
     for color, name in zip(SERIES_COLORS, names):
         curves = cumulative_seconds(run_dir / f"{slug(name)}.csv")
-        steps, mean, low, high = mean_and_ci(curves, min_games)
+        used_min = min(min_games, len(curves))  # runs with fewer games than --min-games
+        steps, mean, low, high = mean_and_ci(curves, used_min)
         ax.fill_between(steps, low, high, color=color, alpha=0.5, linewidth=0)
         ax.plot(steps, mean, color=color, linewidth=2, label=f"{name}  (n = {len(curves)} games)")
         ax.plot(steps[-1], mean[-1], "o", color=color, markersize=6, markeredgecolor=SURFACE, markeredgewidth=2)
@@ -87,7 +88,7 @@ def plot_cumulative_time(run_dir: Path, out: Path, models: list[str] | None, min
     ax.spines["bottom"].set_color(AXIS)
     ax.tick_params(colors=MUTED, labelsize=9, length=0)
     ax.set_title(f"Mean across games still in play (solid) with 95% bootstrap CI (band); curves end when "
-                 f"fewer than {min_games} games remain", loc="left", fontsize=9.5, color=INK_2, pad=10)
+                 f"fewer than {used_min} games remain", loc="left", fontsize=9.5, color=INK_2, pad=10)
     legend = ax.legend(loc="upper left", frameon=False, fontsize=9)
     for text in legend.get_texts():
         text.set_color(INK_2)
