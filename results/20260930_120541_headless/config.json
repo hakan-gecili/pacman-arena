@@ -1,0 +1,63 @@
+{
+  "mode": "headless",
+  "argv": [
+    "--headless",
+    "--models",
+    "laya,tev,nimble,greedy",
+    "--games",
+    "30",
+    "--seed",
+    "1",
+    "--out",
+    "results"
+  ],
+  "models": {
+    "Laya": {
+      "runtime": "laya-mlx",
+      "model": "aac6fef/laya-mlx",
+      "revision": "20aed815fc6acde75733882e7ec0e3f28aeb9717"
+    },
+    "tev1:4b": {
+      "runtime": "ollama",
+      "model": "tev1:4b",
+      "digest": "cef45ef93cf6df8bf32bdd689b0a8fd01f88ae9034d33ce890c54f77e4cd981e",
+      "matches_published_digest": true
+    },
+    "nimble:latest": {
+      "runtime": "ollama",
+      "model": "nimble:latest",
+      "digest": "24e550a16a7081881be2f1f0d91e8cc13a597472735c04119f035a0a85c67e0c",
+      "matches_published_digest": true
+    },
+    "greedy baseline": {
+      "runtime": "none",
+      "model": "paths.path_value"
+    }
+  },
+  "settings": {
+    "depth": 10,
+    "per_direction": 3,
+    "max_options": 10,
+    "replan": "junction",
+    "danger_margin": 1
+  },
+  "seed": 1,
+  "max_steps": 2000,
+  "tiebreak": "score, then lives left, then fewer steps",
+  "instructions": "Choose the path that maximizes Pac-Man's score.",
+  "rules": "rules: +10 per pellet; touching a ghost loses a life; 0 lives is game over; ghosts move 1 cell per 2 Pac-Man steps and mostly chase Pac-Man; margin = steps to spare before a chasing ghost can reach the path, 0 or less is UNSAFE.\nstrategy: prefer SAFE paths with the most pellets, eaten soonest; avoid dead ends when a ghost is near; if no path has pellets, head toward the nearest pellet.",
+  "environment": {
+    "python": "3.14.7",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "packages": {
+      "laya-mlx": "0.2.0",
+      "mlx": "0.32.2",
+      "numpy": "2.5.3",
+      "pygame-ce": "2.5.8",
+      "requests": "2.34.2",
+      "huggingface_hub": "1.33.0",
+      "tokenizers": "0.23.2"
+    }
+  }
+}

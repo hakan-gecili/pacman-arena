@@ -1,0 +1,936 @@
+{
+  "Laya": {
+    "games": 30,
+    "mean_score": 1046.0,
+    "mean_score_95ci": [
+      980.33,
+      1113.67
+    ],
+    "board_clear_rate": 0.0,
+    "mean_lives_left": 0.0,
+    "lives_lost_per_100_steps": 1.0482,
+    "mean_steps": 312.3,
+    "mean_game_seconds": 4.7,
+    "decisions": 3859,
+    "decision_latency_median_ms": 32.0,
+    "decision_latency_p95_ms": 33.01,
+    "invalid_answers": 0,
+    "agreement_with_greedy": 0.2853,
+    "max_input_tokens": 371,
+    "truncated_decisions": 0
+  },
+  "tev1:4b": {
+    "games": 30,
+    "mean_score": 1408.33,
+    "mean_score_95ci": [
+      1406.0,
+      1410.0
+    ],
+    "board_clear_rate": 0.9,
+    "mean_lives_left": 2.233,
+    "lives_lost_per_100_steps": 0.2597,
+    "mean_steps": 289.1,
+    "mean_game_seconds": 39.48,
+    "decisions": 3048,
+    "decision_latency_median_ms": 383.62,
+    "decision_latency_p95_ms": 390.46,
+    "invalid_answers": 0,
+    "agreement_with_greedy": 0.5164,
+    "max_input_tokens": 456,
+    "truncated_decisions": 0
+  },
+  "nimble:latest": {
+    "games": 30,
+    "mean_score": 1408.33,
+    "mean_score_95ci": [
+      1405.33,
+      1410.0
+    ],
+    "board_clear_rate": 0.9333,
+    "mean_lives_left": 2.367,
+    "lives_lost_per_100_steps": 0.2207,
+    "mean_steps": 298.3,
+    "mean_game_seconds": 66.39,
+    "decisions": 2933,
+    "decision_latency_median_ms": 668.03,
+    "decision_latency_p95_ms": 708.93,
+    "invalid_answers": 0,
+    "agreement_with_greedy": 0.5714,
+    "max_input_tokens": 508,
+    "truncated_decisions": 0
+  },
+  "greedy baseline": {
+    "games": 30,
+    "mean_score": 1410.0,
+    "mean_score_95ci": [
+      1410.0,
+      1410.0
+    ],
+    "board_clear_rate": 1.0,
+    "mean_lives_left": 2.767,
+    "lives_lost_per_100_steps": 0.0848,
+    "mean_steps": 297.2,
+    "mean_game_seconds": 0.51,
+    "decisions": 2987,
+    "decision_latency_median_ms": 0.0,
+    "decision_latency_p95_ms": 0.0,
+    "invalid_answers": 0,
+    "agreement_with_greedy": 1.0,
+    "max_input_tokens": 0,
+    "truncated_decisions": 0
+  },
+  "head_to_head": {
+    "seeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ],
+    "wins": {
+      "Laya": 0,
+      "tev1:4b": 7,
+      "nimble:latest": 9,
+      "greedy baseline": 14,
+      "tie": 0
+    },
+    "tiebreak": "score, then lives left, then fewer steps",
+    "per_seed": {
+      "1": {
+        "Laya": {
+          "score": 1040,
+          "lives_left": 0,
+          "steps": 290,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 1,
+          "steps": 344,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 296,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 269,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "2": {
+        "Laya": {
+          "score": 1170,
+          "lives_left": 0,
+          "steps": 467,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 1,
+          "steps": 266,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 258,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 312,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "3": {
+        "Laya": {
+          "score": 1150,
+          "lives_left": 0,
+          "steps": 278,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 254,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 304,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 230,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "4": {
+        "Laya": {
+          "score": 1120,
+          "lives_left": 0,
+          "steps": 375,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 333,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 260,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 296,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "5": {
+        "Laya": {
+          "score": 1110,
+          "lives_left": 0,
+          "steps": 362,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 252,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 230,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 268,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "6": {
+        "Laya": {
+          "score": 860,
+          "lives_left": 0,
+          "steps": 211,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 315,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 286,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 273,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "7": {
+        "Laya": {
+          "score": 1050,
+          "lives_left": 0,
+          "steps": 242,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 268,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 334,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 495,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "8": {
+        "Laya": {
+          "score": 1050,
+          "lives_left": 0,
+          "steps": 304,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1400,
+          "lives_left": 0,
+          "steps": 308,
+          "cleared": false
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 316,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 265,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "9": {
+        "Laya": {
+          "score": 770,
+          "lives_left": 0,
+          "steps": 248,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 246,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 220,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 236,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "10": {
+        "Laya": {
+          "score": 1020,
+          "lives_left": 0,
+          "steps": 282,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 286,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 395,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 321,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "11": {
+        "Laya": {
+          "score": 650,
+          "lives_left": 0,
+          "steps": 173,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 1,
+          "steps": 291,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 249,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 339,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "12": {
+        "Laya": {
+          "score": 710,
+          "lives_left": 0,
+          "steps": 196,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 278,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 241,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 254,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "13": {
+        "Laya": {
+          "score": 900,
+          "lives_left": 0,
+          "steps": 235,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 240,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 314,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 266,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "14": {
+        "Laya": {
+          "score": 1000,
+          "lives_left": 0,
+          "steps": 270,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 278,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 226,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 299,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "15": {
+        "Laya": {
+          "score": 1340,
+          "lives_left": 0,
+          "steps": 498,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 346,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 281,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 252,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "16": {
+        "Laya": {
+          "score": 670,
+          "lives_left": 0,
+          "steps": 177,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1380,
+          "lives_left": 0,
+          "steps": 304,
+          "cleared": false
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 340,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 270,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "17": {
+        "Laya": {
+          "score": 1260,
+          "lives_left": 0,
+          "steps": 347,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 274,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 320,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 260,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "18": {
+        "Laya": {
+          "score": 1110,
+          "lives_left": 0,
+          "steps": 292,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 242,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 368,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 282,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "19": {
+        "Laya": {
+          "score": 1270,
+          "lives_left": 0,
+          "steps": 386,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 322,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 327,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 462,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "20": {
+        "Laya": {
+          "score": 1170,
+          "lives_left": 0,
+          "steps": 302,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 280,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 1,
+          "steps": 285,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 308,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "21": {
+        "Laya": {
+          "score": 730,
+          "lives_left": 0,
+          "steps": 182,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 317,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 302,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 282,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "22": {
+        "Laya": {
+          "score": 1210,
+          "lives_left": 0,
+          "steps": 269,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 280,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 208,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 316,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "23": {
+        "Laya": {
+          "score": 1230,
+          "lives_left": 0,
+          "steps": 393,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 318,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 251,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 250,
+          "cleared": true
+        },
+        "winner": "nimble:latest"
+      },
+      "24": {
+        "Laya": {
+          "score": 1170,
+          "lives_left": 0,
+          "steps": 354,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 346,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 412,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 256,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "25": {
+        "Laya": {
+          "score": 1120,
+          "lives_left": 0,
+          "steps": 419,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 260,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 1,
+          "steps": 238,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 232,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "26": {
+        "Laya": {
+          "score": 890,
+          "lives_left": 0,
+          "steps": 248,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 274,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 445,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 252,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "27": {
+        "Laya": {
+          "score": 1220,
+          "lives_left": 0,
+          "steps": 476,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 291,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1400,
+          "lives_left": 0,
+          "steps": 302,
+          "cleared": false
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 272,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "28": {
+        "Laya": {
+          "score": 1190,
+          "lives_left": 0,
+          "steps": 459,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 236,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 359,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 509,
+          "cleared": true
+        },
+        "winner": "tev1:4b"
+      },
+      "29": {
+        "Laya": {
+          "score": 1150,
+          "lives_left": 0,
+          "steps": 368,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1400,
+          "lives_left": 0,
+          "steps": 291,
+          "cleared": false
+        },
+        "nimble:latest": {
+          "score": 1370,
+          "lives_left": 0,
+          "steps": 287,
+          "cleared": false
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 286,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      },
+      "30": {
+        "Laya": {
+          "score": 1050,
+          "lives_left": 0,
+          "steps": 266,
+          "cleared": false
+        },
+        "tev1:4b": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 334,
+          "cleared": true
+        },
+        "nimble:latest": {
+          "score": 1410,
+          "lives_left": 2,
+          "steps": 296,
+          "cleared": true
+        },
+        "greedy baseline": {
+          "score": 1410,
+          "lives_left": 3,
+          "steps": 304,
+          "cleared": true
+        },
+        "winner": "greedy baseline"
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+# Direct dependencies, pinned to the versions used for the published runs.
+# laya-mlx runs on Apple Silicon only (MLX). Python >= 3.11 (tested on 3.14.7).
+laya-mlx==0.2.0
+mlx==0.32.2
+numpy==2.5.3
+tokenizers==0.23.2
+huggingface_hub==1.33.0
+pygame-ce==2.5.8
+requests==2.34.2
+matplotlib==3.11.2        # charts (pacman_arena.plots)
